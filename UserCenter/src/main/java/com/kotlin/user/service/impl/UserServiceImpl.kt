@@ -6,11 +6,15 @@ import com.kotlin.user.data.repository.UserRepository
 import com.kotlin.user.service.UserService
 import rx.Observable
 import rx.functions.Func1
+import javax.inject.Inject
 
-class UserServiceImpl : UserService {
+class UserServiceImpl @Inject constructor(): UserService {
+    //让它自己实例化，使用Inject
+    @Inject
+    lateinit var repository: UserRepository
+
     override fun register(mobile: String, pwd: String, verifyCode: String): Observable<Boolean> {
         //UserRepository 才是真正的去访问网络层
-        val repository = UserRepository()
 
         //注册成功后回调回来
         var ob = repository.register(mobile, pwd, verifyCode)

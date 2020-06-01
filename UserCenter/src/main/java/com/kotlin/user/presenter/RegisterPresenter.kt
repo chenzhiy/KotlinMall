@@ -9,11 +9,15 @@ import com.kotlin.user.service.impl.UserServiceImpl
 import rx.Subscriber
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
+import javax.inject.Inject
 
-class RegisterPresenter : BasePresenter<RegisterView>() {
+class RegisterPresenter @Inject constructor(): BasePresenter<RegisterView>() {
+
+    @Inject
+    lateinit var userService: UserService
+
     fun register(mobile: String, pwd: String,verifyCode: String) {
         //业务逻辑
-        val userService = UserServiceImpl()
         userService.register(mobile, pwd, verifyCode)
             .execute(object :BaseSubscriber<Boolean>(){
                 override fun onNext(t: Boolean) {
