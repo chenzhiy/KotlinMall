@@ -9,12 +9,14 @@ import rx.functions.Func1
 
 class UserServiceImpl : UserService {
     override fun register(mobile: String, pwd: String, verifyCode: String): Observable<Boolean> {
-
+        //UserRepository 才是真正的去访问网络层
         val repository = UserRepository()
 
+        //注册成功后回调回来
         var ob = repository.register(mobile, pwd, verifyCode)
             .flatMap(object : Func1<BaseResp<String>, Observable<Boolean>> {
                 override fun call(t: BaseResp<String>?): Observable<Boolean> {
+                    //通过这个里面的状态来判断是成功还是失败
                     if (t != null) {
                         if (t.status != 0) {
                             return Observable.error(BaseException(t.status, t.msg))

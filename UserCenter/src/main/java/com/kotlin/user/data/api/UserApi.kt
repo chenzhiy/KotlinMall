@@ -8,6 +8,8 @@ import rx.Observable
 
 
 interface UserApi {
+
+    //通过retrofit 注解标注
     @POST("userCenter/register")
     fun register(@Body req: RegisterReq): Observable<BaseResp<String>>
 }

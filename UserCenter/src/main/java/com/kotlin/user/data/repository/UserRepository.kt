@@ -10,6 +10,7 @@ import rx.Observable
 class UserRepository {
     fun register(mobile: String, pwd: String, verifyCode: String): Observable<BaseResp<String>> {
 
+        //网络层通过RetrofitFactory 构建了一个 UserApi
         return RetrofitFactory.instance.create(UserApi::class.java).register(RegisterReq(mobile,pwd,verifyCode))
     }
 }
