@@ -1,6 +1,7 @@
 package com.kotlin.base.injection.component
 
 import android.content.Context
+import com.kotlin.base.injection.ActivityScope
 import com.kotlin.base.injection.module.ActivityModule
 import dagger.Component
 
