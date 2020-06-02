@@ -17,7 +17,7 @@ class RegisterPresenter @Inject constructor(): BasePresenter<RegisterView>() {
     lateinit var userService: UserService
 
     fun register(mobile: String, pwd: String,verifyCode: String) {
-        //业务逻辑
+        //业务逻辑处理
         userService.register(mobile, pwd, verifyCode)
             .execute(object :BaseSubscriber<Boolean>(){
                 override fun onNext(t: Boolean) {
