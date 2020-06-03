@@ -8,6 +8,7 @@
         android:allowBackup="true"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
+        android:name="com.kotlin.base.common.BaseApplication"
         android:theme="@style/AppTheme"
         >
 

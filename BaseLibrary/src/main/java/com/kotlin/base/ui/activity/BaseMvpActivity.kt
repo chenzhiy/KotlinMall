@@ -26,12 +26,15 @@ open class BaseMvpActivity<T: BasePresenter<*>>: BaseActivity(),BaseView {
     @Inject
     lateinit var mPresenter: T
 
+    @Inject
     lateinit var activityComponent: ActivityComponent
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         initActivityInject()
     }
+
+
     private fun initActivityInject(){
         activityComponent = DaggerActivityComponent.builder().appComponent((application as BaseApplication).appComponent).activityModule(
             ActivityModule(this)
