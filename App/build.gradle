@@ -104,6 +104,9 @@ dependencies {
     implementation "com.google.dagger:dagger:2.19"
     kapt "com.google.dagger:dagger-compiler:2.19"
 
+    implementation "com.trello:rxlifecycle-kotlin:$rx_lifecycle_version"
+    implementation "com.trello:rxlifecycle-components:$rx_lifecycle_version"
+
     if (isUserModule.toBoolean()) {
         implementation project(path: ':UserCenter')
     }

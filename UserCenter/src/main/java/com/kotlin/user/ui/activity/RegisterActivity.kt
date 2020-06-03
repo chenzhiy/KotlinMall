@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.kotlin.base.injection.component.DaggerActivityComponent
 import com.kotlin.base.ui.activity.BaseActivity
 import com.kotlin.base.ui.activity.BaseMvpActivity
 import com.kotlin.user.R
@@ -33,7 +34,7 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView{
         }
 
         mGetVerifyCodeBtn.setOnClickListener {
-            mPresenter.register2(mMobileEt.text.toString(),mVerifyCodeEt.text.toString(),mPwdEt.text.toString())
+            toast("注册成功")
         }
     }
 
@@ -46,6 +47,7 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView{
     }
 
     private fun initInjection(){
+
 
         DaggerUserComponent.builder().activityComponent(activityComponent).userModule(UserModule()).build().inject(this)
 
