@@ -11,17 +11,14 @@ import com.kotlin.base.presenter.BasePresenter
 import com.kotlin.base.presenter.view.BaseView
 import javax.inject.Inject
 
-open class BaseMvpActivity<T: BasePresenter<*>>: BaseActivity(),BaseView {
+open abstract class BaseMvpActivity<T: BasePresenter<*>>: BaseActivity(),BaseView {
     override fun showLoading() {
-        TODO("Not yet implemented")
     }
 
     override fun hideLoading() {
-        TODO("Not yet implemented")
     }
 
     override fun onError() {
-        TODO("Not yet implemented")
     }
 
     @Inject
@@ -33,7 +30,11 @@ open class BaseMvpActivity<T: BasePresenter<*>>: BaseActivity(),BaseView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initActivityInject()
+
+        injectComponent()
     }
+
+    abstract fun injectComponent()
 
 
     private fun initActivityInject(){
