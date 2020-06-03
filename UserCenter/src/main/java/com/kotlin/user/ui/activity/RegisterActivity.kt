@@ -30,14 +30,19 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView{
         mRegisterBtn.setOnClickListener {
             mPresenter.register(mMobileEt.text.toString(),mVerifyCodeEt.text.toString(),mPwdEt.text.toString())
 //            toast("注册成功")
+        }
 
-
+        mGetVerifyCodeBtn.setOnClickListener {
+            mPresenter.register2(mMobileEt.text.toString(),mVerifyCodeEt.text.toString(),mPwdEt.text.toString())
         }
     }
 
     override fun onRegisterResult(result: Boolean) {
-        Log.d("msg","这是子类onRegisterResult")
-        toast("注册成功")
+        if (result){
+            toast("注册成功")
+        }else{
+            toast("注册失败")
+        }
     }
 
     private fun initInjection(){
