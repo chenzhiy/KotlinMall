@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.kotlin.base.common.AppManager
 import com.kotlin.base.ext.onClick
 import com.kotlin.base.injection.component.DaggerActivityComponent
 import com.kotlin.base.ui.activity.BaseActivity
@@ -24,6 +25,8 @@ import kotlin.math.log
 
 class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView{
 
+    private var pressTime:Long = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -39,7 +42,16 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView{
 
     override fun onRegisterResult(result: String) {
         toast(result)
+    }
 
+    override fun onBackPressed() {
+        var time = System.currentTimeMillis()
+        if (time - pressTime > 2000){
+            toast("再按一次退出程序")
+            pressTime = time
+        }else{
+            AppManager.instance.exitApp(this)
+        }
     }
 
 
