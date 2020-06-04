@@ -1,6 +1,7 @@
 package com.kotlin.user.service.impl
 
 
+import com.kotlin.base.ext.convertBoolean
 import com.kotlin.base.rx.BaseFuncBoolean
 import com.kotlin.user.data.repository.UserRepository
 import com.kotlin.user.service.UserService
@@ -16,7 +17,8 @@ class UserServiceImpl @Inject constructor(): UserService {
         //UserRepository 才是真正的去访问网络层
 
         //注册成功后回调回来
-        return repository.register(mobile, pwd, verifyCode).flatMap(BaseFuncBoolean())
+//        return repository.register(mobile, pwd, verifyCode).flatMap(BaseFuncBoolean())
+        return repository.register(mobile,pwd,verifyCode).convertBoolean()
     }
 }
 

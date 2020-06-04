@@ -3,7 +3,9 @@ package com.kotlin.user.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
+import com.kotlin.base.ext.onClick
 import com.kotlin.base.injection.component.DaggerActivityComponent
 import com.kotlin.base.ui.activity.BaseActivity
 import com.kotlin.base.ui.activity.BaseMvpActivity
@@ -26,11 +28,11 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        mRegisterBtn.setOnClickListener {
-            mPresenter.register(mMobileEt.text.toString(),mVerifyCodeEt.text.toString(),mPwdEt.text.toString())
-        }
+        mRegisterBtn.onClick (View.OnClickListener { mPresenter.register(mMobileEt.text.toString(),mVerifyCodeEt.text.toString(),mPwdEt.text.toString()) })
+
 
         mGetVerifyCodeBtn.setOnClickListener {
+            mRegisterBtn.onClick  { mPresenter.register(mMobileEt.text.toString(),mVerifyCodeEt.text.toString(),mPwdEt.text.toString()) }
             toast("注册成功")
         }
     }
