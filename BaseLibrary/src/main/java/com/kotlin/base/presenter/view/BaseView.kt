@@ -8,5 +8,5 @@ interface BaseView {
     fun hideLoading()
 
     //显示错误信息
-    fun onError()
+    fun onError(text:String)
 }

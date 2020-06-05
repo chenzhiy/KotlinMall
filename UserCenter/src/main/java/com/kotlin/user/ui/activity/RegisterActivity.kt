@@ -10,6 +10,7 @@ import com.kotlin.base.ext.onClick
 import com.kotlin.base.injection.component.DaggerActivityComponent
 import com.kotlin.base.ui.activity.BaseActivity
 import com.kotlin.base.ui.activity.BaseMvpActivity
+import com.kotlin.base.widgets.VerifyButton
 import com.kotlin.user.R
 import com.kotlin.user.injection.component.DaggerUserComponent
 import com.kotlin.user.injection.module.UserModule
@@ -34,10 +35,17 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView{
         mRegisterBtn.onClick (View.OnClickListener { mPresenter.register(mMobileEt.text.toString(),mVerifyCodeEt.text.toString(),mPwdEt.text.toString()) })
 
 
+//        mGetVerifyCodeBtn.setOnVerifyBtnClick(object :VerifyButton.OnVerifyBtnClick{
+////             override fun onClick(){
+////                 toast("获取验证码")
+////            }
+////        })
         mGetVerifyCodeBtn.setOnClickListener {
-            mRegisterBtn.onClick  { mPresenter.register(mMobileEt.text.toString(),mVerifyCodeEt.text.toString(),mPwdEt.text.toString()) }
-            toast("注册成功")
+            mGetVerifyCodeBtn.requestSendVerifyNumber()
+            toast("获取验证码成功")
         }
+
+
     }
 
     override fun onRegisterResult(result: String) {

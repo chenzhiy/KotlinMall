@@ -21,7 +21,7 @@ class RegisterPresenter @Inject constructor() : BasePresenter<RegisterView>() {
         //业务逻辑处理
 
         if (!checkNetWork()){
-            println("网络不可用。。。")
+            return
         }
 
         mView.showLoading()
