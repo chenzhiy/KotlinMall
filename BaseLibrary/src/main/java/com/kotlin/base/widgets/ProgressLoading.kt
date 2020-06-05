@@ -8,13 +8,13 @@ import android.widget.ImageView
 import com.kotlin.base.R
 import org.jetbrains.anko.find
 
-class ProgressLoading(context: Context,theme:Int):Dialog(context,theme) {
+class ProgressLoading private constructor(context: Context,theme:Int)  :Dialog(context,theme) {
 
     companion object{
         private lateinit var mDialog: ProgressLoading
         private var animDrawable:AnimationDrawable? = null
 
-        fun create(context: Context){
+        fun create(context: Context):ProgressLoading{
             mDialog = ProgressLoading(context, R.style.LightProgressDialog)
 
             //设置dialog的属性
@@ -31,6 +31,8 @@ class ProgressLoading(context: Context,theme:Int):Dialog(context,theme) {
 
             val loadingView = mDialog.find<ImageView>(R.id.iv_loading)
             animDrawable = loadingView.background as AnimationDrawable
+
+            return mDialog
         }
     }
 

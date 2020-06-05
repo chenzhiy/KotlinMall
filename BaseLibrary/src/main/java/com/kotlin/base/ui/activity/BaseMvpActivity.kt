@@ -9,13 +9,16 @@ import com.kotlin.base.injection.module.ActivityModule
 import com.kotlin.base.injection.module.LifecycleProviderModule
 import com.kotlin.base.presenter.BasePresenter
 import com.kotlin.base.presenter.view.BaseView
+import com.kotlin.base.widgets.ProgressLoading
 import javax.inject.Inject
 
 open abstract class BaseMvpActivity<T: BasePresenter<*>>: BaseActivity(),BaseView {
     override fun showLoading() {
+        mLoadingDialog.showLoading()
     }
 
     override fun hideLoading() {
+        mLoadingDialog.hideLoading()
     }
 
     override fun onError() {
@@ -24,14 +27,17 @@ open abstract class BaseMvpActivity<T: BasePresenter<*>>: BaseActivity(),BaseVie
     @Inject
     lateinit var mPresenter: T
 
-    @Inject
     lateinit var activityComponent: ActivityComponent
+
+    private lateinit var mLoadingDialog:ProgressLoading
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initActivityInject()
 
         injectComponent()
+
+        mLoadingDialog = ProgressLoading.create(this)
     }
 
     abstract fun injectComponent()
