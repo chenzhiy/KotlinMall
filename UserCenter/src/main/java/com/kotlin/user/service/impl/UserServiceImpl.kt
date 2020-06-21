@@ -20,6 +20,8 @@ class UserServiceImpl @Inject constructor(): UserService {
 //        return repository.register(mobile, pwd, verifyCode).flatMap(BaseFuncBoolean())
         return repository.register(mobile,pwd,verifyCode).convertBoolean()
     }
+
+
 }
 
 

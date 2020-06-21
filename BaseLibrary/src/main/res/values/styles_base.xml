@@ -10,6 +10,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+    <style name="MatchMatch" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
 
     <style name="WrapWrap" >
         <item name="android:layout_width">wrap_content</item>
@@ -54,6 +58,22 @@
 
     <style name="WrapWrap.Horizontal" >
         <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="MatchWrap.Vertical" >
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="MatchWrap.Horizontal" >
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="MatchMatch.Horizontal" >
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="MatchMatch.Vertical" >
+        <item name="android:orientation">vertical</item>
     </style>
 
 </resources>

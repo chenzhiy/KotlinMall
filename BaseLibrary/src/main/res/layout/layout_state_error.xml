@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:gravity="center">
+
+    <ImageView
+        style="@style/WrapWrap"
+        android:scaleType="centerCrop"
+        >
+    </ImageView>
+
+    <TextView
+        style="@style/WrapWrap"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="出错啦~~~"
+        >
+    </TextView>
+
+</LinearLayout>

@@ -12,9 +12,9 @@ import rx.schedulers.Schedulers
 
 fun <T> Observable<T>.execute(subscriber: BaseSubscriber<T>,lifecycleProvider: LifecycleProvider<*>){
 
-    this.observeOn(AndroidSchedulers.mainThread())
+    this.subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
         .compose(lifecycleProvider.bindToLifecycle())
-        .subscribeOn(Schedulers.io())
         .subscribe(subscriber)
 }
 

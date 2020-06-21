@@ -1,5 +1,6 @@
 package com.kotlin.base.rx
 
+import android.util.Log
 import com.kotlin.base.data.protocol.BaseResp
 import com.kotlin.base.ext.BaseException
 import rx.Observable
