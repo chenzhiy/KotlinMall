@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kotlin.user.ui.activity.LoginActivity">
+
+    <com.kotlin.base.widgets.HeaderBar
+        android:id="@+id/mHeaderBar"
+        style="@style/MatchWrap"
+        app:titleText="登录"
+        app:rightText="注册"/>
+
+    <LinearLayout
+        style="@style/MatchWrap.Vertical"
+        android:layout_margin="15dp"
+        android:background="@drawable/border_corner_all">
+
+        <EditText
+            android:id="@+id/mMobileEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_user_name"
+            android:drawablePadding="5dp"
+            android:hint="请输入手机号码"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/common_padding_small"></EditText>
+
+        <View style="@style/DividerFixedHeight"></View>
+
+        <EditText
+            android:id="@+id/mPwdEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_pwd"
+            android:drawablePadding="5dp"
+            android:hint="请输入密码（6-20位字母或数字）"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingLeft="5dp"></EditText>
+
+        <View style="@style/DividerFixedHeight"></View>
+
+        <Button
+            android:id="@+id/mLoginBtn"
+            style="@style/FullBtnStyle"
+            android:text="登录" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="忘记密码？"
+            android:textAlignment="textEnd">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

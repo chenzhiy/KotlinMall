@@ -1,8 +1,10 @@
 package com.kotlin.user.service.impl
 
 
+import com.kotlin.base.ext.convert
 import com.kotlin.base.ext.convertBoolean
 import com.kotlin.base.rx.BaseFuncBoolean
+import com.kotlin.user.data.protocol.UserInfo
 import com.kotlin.user.data.repository.UserRepository
 import com.kotlin.user.service.UserService
 import rx.Observable
@@ -19,9 +21,12 @@ class UserServiceImpl @Inject constructor(): UserService {
         //注册成功后回调回来
 //        return repository.register(mobile, pwd, verifyCode).flatMap(BaseFuncBoolean())
         return repository.register(mobile,pwd,verifyCode).convertBoolean()
+
     }
 
-
+    override fun login(mobile: String, pwd: String, pushId: String): Observable<UserInfo> {
+        return repository.login(mobile,pwd,pushId).convert()
+    }
 }
 
 
