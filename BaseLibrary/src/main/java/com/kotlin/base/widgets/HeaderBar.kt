@@ -1,10 +1,13 @@
 package com.kotlin.base.widgets
 
+import android.app.Activity
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.TextView
 import com.kotlin.base.R
+import com.kotlin.base.ext.onClick
 import kotlinx.android.synthetic.main.layout_header_bar.view.*
 
 class HeaderBar @JvmOverloads constructor(context: Context, attrs:AttributeSet? = null, defStyleAttr:Int = 0): FrameLayout(context,attrs, defStyleAttr)
@@ -39,5 +42,15 @@ class HeaderBar @JvmOverloads constructor(context: Context, attrs:AttributeSet? 
             mRightTv.text = it
             mRightTv.visibility = View.VISIBLE
         }
+
+        mLeftIv.onClick {
+            if (context is Activity){
+                (context as Activity).finish() //退出当前的activity
+            }
+        }
+    }
+
+    fun getRightView(): TextView {
+        return mRightTv
     }
 }
