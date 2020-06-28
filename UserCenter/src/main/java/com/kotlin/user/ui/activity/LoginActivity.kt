@@ -38,11 +38,12 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
         mLoginBtn.onClick(this)
 
         mHeaderBar.getRightView().onClick(this)
+        mForgetPwdTv.onClick(this)
     }
 
     //登录回调
     override fun onLoginResult(result: UserInfo) {
-        toast("登录成功")
+//        toast("登录成功")
     }
 
 
@@ -61,6 +62,9 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
                 }
                 R.id.mLoginBtn -> {
                     mPresenter.login(mMobileEt.text.toString(),mPwdEt.text.toString(),"")
+                }
+                R.id.mForgetPwdTv -> {
+                    startActivity<ForgetPwdActivity>()
                 }
             }
         }

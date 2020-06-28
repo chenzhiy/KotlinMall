@@ -8,25 +8,12 @@
     <com.kotlin.base.widgets.HeaderBar
         android:id="@+id/mHeaderBar"
         style="@style/MatchWrap"
-        app:titleText="登录"
-        app:rightText="注册"/>
+        app:titleText="重置密码"/>
 
     <LinearLayout
         style="@style/MatchWrap.Vertical"
         android:layout_margin="15dp"
         android:background="@drawable/border_corner_all">
-
-        <EditText
-            android:id="@+id/mMobileEt"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@null"
-            android:drawableLeft="@drawable/icon_user_name"
-            android:drawablePadding="5dp"
-            android:hint="请输入手机号码"
-            android:inputType="phone"
-            android:maxLength="11"
-            android:paddingLeft="@dimen/common_padding_small"></EditText>
 
         <View style="@style/DividerFixedHeight"></View>
 
@@ -44,19 +31,24 @@
 
         <View style="@style/DividerFixedHeight"></View>
 
-        <Button
-            android:id="@+id/mLoginBtn"
-            style="@style/FullBtnStyle"
-            android:text="登录" />
-
-        <TextView
-            android:id="@+id/mForgetPwdTv"
+        <EditText
+            android:id="@+id/mPwdConfirmEt"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="忘记密码？"
-            android:textAlignment="textEnd">
+            android:layout_height="50dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_pwd"
+            android:drawablePadding="5dp"
+            android:hint="请再次输入密码（6-20位字母或数字）"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingLeft="5dp"></EditText>
 
-        </TextView>
+        <View style="@style/DividerFixedHeight"></View>
+
+        <Button
+            android:id="@+id/mResetPwdBtn"
+            style="@style/FullBtnStyle"
+            android:text="确认" />
 
     </LinearLayout>
 
