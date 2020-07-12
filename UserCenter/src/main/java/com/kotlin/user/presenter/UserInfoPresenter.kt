@@ -5,6 +5,7 @@ import com.kotlin.base.presenter.BasePresenter
 import com.kotlin.base.rx.BaseSubscriber
 import com.kotlin.user.presenter.view.RegisterView
 import com.kotlin.user.presenter.view.UserInfoView
+import com.kotlin.user.service.UploadService
 import com.kotlin.user.service.UserService
 import com.kotlin.user.service.impl.UserServiceImpl
 import rx.Subscriber
@@ -18,5 +19,16 @@ class UserInfoPresenter @Inject constructor() : BasePresenter<UserInfoView>() {
     @Inject
     lateinit var userService: UserService
 
+    lateinit var uploadService:UploadService
 
+    fun getUploadToken(){
+        if (checkNetWork())
+            return
+        mView.showLoading()
+        uploadService.getUploadToken().execute(object :BaseSubscriber<String>(mView){
+            override fun onNext(t: String) {
+                mView.onGetUploadTokenResult(t)
+            }
+        },lifecycleProvider)
+    }
 }
