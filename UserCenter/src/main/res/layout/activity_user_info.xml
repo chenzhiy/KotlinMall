@@ -72,7 +72,7 @@
                 android:background="@drawable/gender_bg_selector"
                 android:textColor="@drawable/gender_text_selector"
                 android:layout_marginRight="15dp"
-                android:checked="true"
+                android:checked="false"
                 android:button="@null"
                 android:text="女"/>
 

@@ -23,7 +23,7 @@ class UserInfoPresenter @Inject constructor() : BasePresenter<UserInfoView>() {
     lateinit var uploadService:UploadService
 
     fun getUploadToken(){
-        if (checkNetWork())
+        if (!checkNetWork())
             return
         mView.showLoading()
         uploadService.getUploadToken().execute(object :BaseSubscriber<String>(mView){
@@ -37,7 +37,7 @@ class UserInfoPresenter @Inject constructor() : BasePresenter<UserInfoView>() {
                  userName: String,
                  userGender: String,
                  userSign: String){
-        if (checkNetWork())
+        if (!checkNetWork())
             return
         mView.showLoading()
         userService.editUser(userIcon,userName,userGender,userSign).execute(object :BaseSubscriber<UserInfo>(mView){
