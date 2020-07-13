@@ -15,4 +15,7 @@ interface UserService {
 
     //重置密码
     fun resetPwd(mobile: String,pwd:String): Observable<Boolean>
+
+    //登录
+    fun editUser(userIcon:String,userName:String,userGender:String,userSign:String): Observable<UserInfo>
 }

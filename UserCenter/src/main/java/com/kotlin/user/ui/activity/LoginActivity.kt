@@ -11,6 +11,7 @@ import com.kotlin.user.injection.component.DaggerUserComponent
 import com.kotlin.user.injection.module.UserModule
 import com.kotlin.user.presenter.LoginPresenter
 import com.kotlin.user.presenter.view.LoginView
+import com.kotlin.user.utils.UserPrefsUtils
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.mMobileEt
 import kotlinx.android.synthetic.main.activity_register.mPwdEt
@@ -43,7 +44,8 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
 
     //登录回调
     override fun onLoginResult(result: UserInfo) {
-//        toast("登录成功")
+        toast("登录成功")
+        UserPrefsUtils.putUserInfo(result) //存储用户信息
         startActivity<UserInfoActivity>()
     }
 

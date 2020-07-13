@@ -32,4 +32,10 @@ class UserRepository @Inject constructor() {
         //网络层通过RetrofitFactory 构建了一个 UserApi
         return RetrofitFactory.instance.create(UserApi::class.java).resetPwd(ResetPwdReq(mobile,pwd))
     }
+
+    fun editUser(userIcon: String, userName: String,userGender:String,userSign:String): Observable<BaseResp<UserInfo>> {
+
+        //网络层通过RetrofitFactory 构建了一个 UserApi
+        return RetrofitFactory.instance.create(UserApi::class.java).editUser(EditUserReq(userIcon,userName,userGender,userSign))
+    }
 }

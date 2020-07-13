@@ -25,6 +25,10 @@ interface UserApi {
     //重置密码
     @POST("userCenter/resetPwd")
     fun resetPwd(@Body req: ResetPwdReq): Observable<BaseResp<String>>
+
+    //登录
+    @POST("userCenter/editUser")
+    fun editUser(@Body req: EditUserReq): Observable<BaseResp<UserInfo>>
 }
 
 
