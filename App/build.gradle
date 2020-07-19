@@ -42,6 +42,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':Provider')
+    implementation project(path: ':BaseLibrary')
     // Anko Commons
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
 
@@ -119,6 +120,18 @@ dependencies {
     implementation("io.reactivex.rxjava3:rxkotlin:3.0.0")
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
     implementation 'io.reactivex.rxjava3:rxjava:3.0.4'
+
+    //Circle ImageView
+    implementation "de.hdodenhof:circleimageview:${circle_imageView_version}"
+
+    //Take Photo
+    implementation "com.jph.takephoto:takephoto_library:${take_photo_version}"
+
+    //Alert View
+    implementation "com.bigkoo:alertview:${alert_view_version}"
+
+    implementation "com.qiniu:qiniu-android-sdk:7.3.+"
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.2.0'
 
     if (isUserModule.toBoolean()) {
         implementation project(path: ':UserCenter')
