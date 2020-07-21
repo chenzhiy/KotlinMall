@@ -57,13 +57,13 @@
     <style name="SearchHeaderEtStyle">
         <item name="android:textColor">@color/common_white</item>
         <item name="android:textColorHint">@color/common_white</item>
-        <item name="android:background">@drawable/home_header_corner_bg</item>
+        <item name="android:background">@drawable/corner_blue_white_bg</item>
         <item name="android:paddingLeft">@dimen/common_padding</item>
         <item name="android:paddingTop">@dimen/common_padding_small</item>
         <item name="android:paddingBottom">@dimen/common_padding_small</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginTop">@dimen/common_margin</item>
+        <item name="android:layout_marginTop">@dimen/common_margin_small</item>
         <item name="android:layout_marginBottom">@dimen/common_margin_small</item>
         <item name="android:drawableLeft">@drawable/icon_search</item>
         <item name="android:drawablePadding">@dimen/common_padding_middle</item>
