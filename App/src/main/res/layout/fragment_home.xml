@@ -22,5 +22,36 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"/>
 
+    <com.kotlin.messagecenter.widgets.NewsFlipperView
+        android:id="@+id/mNewsFlipperView"
+        style="@style/MatchWrap"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        style="@style/MatchWrap"
+        android:textSize="@dimen/text_small_size"
+        android:textStyle="bold"
+        android:textColor="@color/text_light_dark"
+        android:background="@color/common_white"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingTop="@dimen/common_padding_small"
+        android:paddingBottom="@dimen/common_margin_small"
+        android:text="火爆进行中"
+        android:drawableLeft="@drawable/icon_special"
+        android:drawablePadding="@dimen/common_padding_small"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mHomeDiscountRv"
+        style="@style/commonRecyclerView"
+        android:background="@color/common_white"
+        android:paddingLeft="@dimen/common_padding"
+        android:paddingRight="@dimen/common_padding"
+        android:paddingBottom="@dimen/common_padding"
+        android:layout_height= "wrap_content"
+        />
+
 
 </LinearLayout>
