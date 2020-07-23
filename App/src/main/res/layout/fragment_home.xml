@@ -53,5 +53,17 @@
         android:layout_height= "wrap_content"
         />
 
+    <me.crosswall.lib.coverflow.core.PagerContainer
+        android:id="@+id/mTopicContainer"
+        style="@style/MatchMatch"
+        android:background="@drawable/home_header_corner_bg">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mTopicPager"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:overScrollMode="never"/>
+    </me.crosswall.lib.coverflow.core.PagerContainer>
+
 
 </LinearLayout>

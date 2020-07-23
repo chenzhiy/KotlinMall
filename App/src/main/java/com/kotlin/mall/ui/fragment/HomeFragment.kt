@@ -11,10 +11,12 @@ import com.kotlin.base.widgets.BannerImageLoader
 import com.kotlin.mall.R
 import com.kotlin.mall.common.*
 import com.kotlin.mall.ui.adapter.HomeDiscountAdapter
+import com.kotlin.mall.ui.adapter.TopicAdapter
 import com.youth.banner.Banner
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
+import me.crosswall.lib.coverflow.CoverFlow
 import org.jetbrains.anko.find
 
 class HomeFragment:BaseFragment() {
@@ -59,5 +61,15 @@ class HomeFragment:BaseFragment() {
         mHomeDiscountRv.adapter = discountAdapter
         discountAdapter?.setData(mutableListOf(HOME_DISCOUNT_ONE, HOME_DISCOUNT_TWO, HOME_DISCOUNT_THREE,
             HOME_DISCOUNT_FOUR, HOME_DISCOUNT_FIVE))
+    }
+
+    private fun initTopic(){
+        //话题
+        mTopicPager.adapter = context?.let { TopicAdapter(it, listOf(HOME_TOPIC_ONE, HOME_TOPIC_TWO,
+            HOME_TOPIC_THREE, HOME_TOPIC_FOUR, HOME_TOPIC_FIVE)) }
+        mTopicPager.currentItem = 1
+        mTopicPager.offscreenPageLimit = 5
+
+        CoverFlow.Builder().with(mTopicPager).scale(0.3f).pagerMargin(-30.0f).spaceSize(0.0f).build()
     }
 }

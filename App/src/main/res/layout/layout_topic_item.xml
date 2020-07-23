@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/WrapWrap"
+    app:cardBackgroundColor="@color/common_white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="2.0dp">
+    <LinearLayout
+        style="@style/MatchWrap.Vertical">
+        <com.kotlin.base.widgets.RoundRectImageView
+            android:id="@+id/mTopicIv"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"/>
+
+        <TextView style="@style/WrapWrap"
+            android:textColor="@color/text_light_dark"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="爱生活"/>
+        <TextView android:textSize="12sp"
+            android:textColor="@color/text_dark"
+            style="@style/WrapWrap"
+            android:layout_marginLeft="5dp"
+            android:text="有品有范又时尚"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

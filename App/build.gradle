@@ -142,6 +142,8 @@ dependencies {
     // For control over item selection of both touch and mouse driven selection
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc01"
 
+    implementation "com.github.crosswall:Android-Coverflow:release-v1.0.4"
+
 
     if (isUserModule.toBoolean()) {
         implementation project(path: ':UserCenter')
