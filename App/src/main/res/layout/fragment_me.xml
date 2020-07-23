@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_user_default_bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/btn_nav_user_normal"/>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            style="@style/WrapWrap"
+            android:textSize="16sp"
+            android:textColor="@color/common_white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="登录/注册"/>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/MatchWrap.Horizontal"
+        android:background="@drawable/border_bottom"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:id="@+id/tv_order_wait_pay"
+            android:text="待付款"
+            android:drawableTop="@drawable/icon_order_wait_pay"
+            style="@style/MeOrderLabelStyle"/>
+
+        <TextView
+            android:id="@+id/tv_order_wait_confirm"
+            android:text="待收货"
+            android:drawableTop="@drawable/icon_order_wait_confirm"
+            style="@style/MeOrderLabelStyle"/>
+
+        <TextView
+            android:id="@+id/tv_order_completed"
+            android:text="已完成"
+            android:drawableTop="@drawable/icon_order_completed"
+            style="@style/MeOrderLabelStyle"/>
+        <View
+            style="@style/DividerFixedWidth"/>
+        <TextView
+            android:id="@+id/tv_order_all"
+            android:text="我的订单"
+            android:drawableTop="@drawable/icon_order_all"
+            style="@style/MeOrderLabelStyle"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_order_address"
+        android:text="收货管理"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/icon_address"
+        style="@style/MeItemStyle"/>
+    <TextView
+        android:id="@+id/tv_share"
+        android:text="分享"
+        android:drawableLeft="@drawable/icon_share"
+        style="@style/MeItemStyle"/>
+    <TextView
+        android:id="@+id/tv_setting"
+        android:text="设置"
+        android:drawableLeft="@drawable/icon_setting"
+        style="@style/MeItemStyle"/>
+
+</LinearLayout>

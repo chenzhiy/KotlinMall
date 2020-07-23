@@ -53,6 +53,32 @@
 
     </style>
 
+    <!-- 订单样式 -->
+    <style name="MeOrderLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="tabIndicatorColor">@color/common_white</item>
+        <item name="tabBackground">@drawable/tab_selector</item>
+        <item name="tabTextAppearance">@style/TabLayoutTextStyle</item>
+        <item name="tabTextColor">@color/text_light_dark</item>
+        <item name="tabSelectedTextColor">@color/common_white</item>
+    </style>
+
+    <!-- 订单样式 -->
+    <style name="MeItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="tabIndicatorColor">@color/common_white</item>
+        <item name="tabBackground">@drawable/tab_selector</item>
+        <item name="tabTextAppearance">@style/TabLayoutTextStyle</item>
+        <item name="tabTextColor">@color/text_light_dark</item>
+        <item name="tabSelectedTextColor">@color/common_white</item>
+    </style>
+
+
     <!--  搜索输入框样式 -->
     <style name="SearchHeaderEtStyle">
         <item name="android:textColor">@color/common_white</item>
@@ -107,6 +133,8 @@
         <item name="tabBackground">@drawable/border_bottom</item>
         <item name="tabTextColor">@color/text_normal</item>
     </style>
+
+
 
     <!-- 横向分割线 -->
     <style name="DividerFixedHeight">
