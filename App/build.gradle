@@ -144,8 +144,17 @@ dependencies {
 
     implementation "com.github.crosswall:Android-Coverflow:release-v1.0.4"
 
+    implementation  'com.github.Kennyc1012:MultiStateView:2.1.2'
+
 
     if (isUserModule.toBoolean()) {
         implementation project(path: ':UserCenter')
     }
+    implementation project(path: ':MessageCenter')
+    implementation project(path: ':GoodsCenter')
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
 }

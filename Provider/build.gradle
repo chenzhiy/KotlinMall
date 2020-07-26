@@ -132,5 +132,7 @@ dependencies {
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.2.0'
     implementation "com.youth.banner:banner:1.4.10"
 
+    implementation  'com.github.Kennyc1012:MultiStateView:2.1.2'
+
 
 }
