@@ -37,6 +37,7 @@ class HomeFragment:BaseFragment() {
         initBanner()
         initNews()
         initDiscount()
+//        initTopic()
     }
 
     private fun initBanner(){
@@ -65,8 +66,8 @@ class HomeFragment:BaseFragment() {
 
     private fun initTopic(){
         //话题
-        mTopicPager.adapter = context?.let { TopicAdapter(it, listOf(HOME_TOPIC_ONE, HOME_TOPIC_TWO,
-            HOME_TOPIC_THREE, HOME_TOPIC_FOUR, HOME_TOPIC_FIVE)) }
+        mTopicPager.adapter = context?.let { TopicAdapter(it, listOf(HOME_TOPIC_ONE, HOME_TOPIC_TWO, HOME_TOPIC_THREE, HOME_TOPIC_FOUR, HOME_TOPIC_FIVE)) }
+        //mTopicPager.adapter = context?.let { TopicAdapter(it, listOf(HOME_TOPIC_ONE, HOME_TOPIC_TWO, HOME_TOPIC_THREE, HOME_TOPIC_FOUR, HOME_TOPIC_FIVE)) }
         mTopicPager.currentItem = 1
         mTopicPager.offscreenPageLimit = 5
 

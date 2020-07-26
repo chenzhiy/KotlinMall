@@ -18,6 +18,12 @@ const val HOME_DISCOUNT_FOUR = "https://img.alicdn.com/imgextra/i3/2838892713/O1
 
 const val HOME_DISCOUNT_FIVE = "https://img.alicdn.com/imgextra/i4/2207292133680/O1CN01NY87x21d3U8AED3zN_!!2207292133680.jpg_960x960q75.jpg_.webp"
 
+//const val HOME_TOPIC_ONE = "https://aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg"
+//const val HOME_TOPIC_TWO = "https://aecpm.alicdn.com/simba/img/TB15tIjGVXXXXcoapXXSutbFXXX.jpg"
+//const val HOME_TOPIC_THREE = "https://picasso.alicdn.com/imgextra/i3/354904/O1CNA15iNWF1100e40425fdb0bb076f0000m_!!354904-0-picassobanner.jpg"
+//const val HOME_TOPIC_FOUR = "https://gw.alicdn.com/imgextra/i2/47/O1CN01nYRG9E1CDZE6DKjHL_!!47-0-lubanu.jpg"
+//const val HOME_TOPIC_FIVE = "https://gw.alicdn.com/imgextra/i4/1/O1CN01JgxYfp1BsV0ZrnqAA_!!1-0-lubanu.jpg"
+
 const val HOME_TOPIC_ONE = "https://aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg"
 
 const val HOME_TOPIC_TWO = "https://aecpm.alicdn.com/simba/img/TB15tIjGVXXXXcoapXXSutbFXXX.jpg"

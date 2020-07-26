@@ -8,7 +8,7 @@
         android:background="@drawable/btn_user_default_bg">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_user_icon"
+            android:id="@+id/mUserIconIv"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
@@ -16,7 +16,7 @@
             android:src="@drawable/btn_nav_user_normal"/>
 
         <TextView
-            android:id="@+id/tv_user_name"
+            android:id="@+id/mUserNameTv"
             style="@style/WrapWrap"
             android:textSize="16sp"
             android:textColor="@color/common_white"
@@ -63,12 +63,12 @@
         android:drawableLeft="@drawable/icon_address"
         style="@style/MeItemStyle"/>
     <TextView
-        android:id="@+id/tv_share"
+        android:id="@+id/mShareTv"
         android:text="分享"
         android:drawableLeft="@drawable/icon_share"
         style="@style/MeItemStyle"/>
     <TextView
-        android:id="@+id/tv_setting"
+        android:id="@+id/mSettingTv"
         android:text="设置"
         android:drawableLeft="@drawable/icon_setting"
         style="@style/MeItemStyle"/>

@@ -9,8 +9,7 @@ import org.jetbrains.anko.dimen
 
 //圆角图标，左上和右上圆角
 
-class RoundRectImageView @JvmOverloads constructor(context: Context,attrs:AttributeSet? = null,defStyleAttr:Int = 0):
-    androidx.appcompat.widget.AppCompatImageView(context,attrs,defStyleAttr) {
+class RoundRectImageView @JvmOverloads constructor(context: Context,attrs:AttributeSet? = null,defStyleAttr:Int = 0): androidx.appcompat.widget.AppCompatImageView(context,attrs,defStyleAttr) {
     val radius = dimen(6).toFloat()
     private val radiusArray:FloatArray = floatArrayOf(radius,radius
     ,radius,radius,0.0f,0.0f,0.0f,0.0f)
@@ -35,9 +34,5 @@ class RoundRectImageView @JvmOverloads constructor(context: Context,attrs:Attrib
             bitmap = Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888)
             localCanvas = Canvas(bitmap)
         }
-    }
-
-    fun loadUrl(imageUrl:String){
-        GlideUtils.loadUrlImage(context,imageUrl,this)
     }
 }
